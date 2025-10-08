@@ -40,43 +40,56 @@ INSERT INTO альбомы (название, год_выпуска) VALUES
 ('Future Nostalgia', 2020),
 ('Chromatica', 2020);
 
--- Вставка треков (20 треков)
+-- Вставка треков (20 треков + тестовые треки для проверки запроса)
 INSERT INTO треки (название, длительность, альбом_id) VALUES
 -- Альбом Imagine (1971)
-('Imagine', '3:07', 1),
-('Jealous Guy', '4:17', 1),
-('My Mummy''s Dead', '0:49', 1),
+('Imagine', '00:03:07', 1),
+('Jealous Guy', '00:04:17', 1),
+('My Mummy''s Dead', '00:00:49', 1),
 
 -- Альбом Thriller (1982)
-('Thriller', '5:57', 2),
-('Beat It', '4:18', 2),
-('Billie Jean', '4:54', 2),
+('Thriller', '00:05:57', 2),
+('Beat It', '00:04:18', 2),
+('Billie Jean', '00:04:54', 2),
 
 -- Альбом What a Wonderful World (1968)
-('What a Wonderful World', '2:21', 3),
-('Hello, Dolly!', '2:27', 3),
+('What a Wonderful World', '00:02:21', 3),
+('Hello, Dolly!', '00:02:27', 3),
 
 -- Альбом The Marshall Mathers LP (2000)
-('The Real Slim Shady', '4:44', 4),
-('Stan', '6:44', 4),
-('My Name Is', '4:28', 4),
+('The Real Slim Shady', '00:04:44', 4),
+('Stan', '00:06:44', 4),
+('My Name Is', '00:04:28', 4),
 
 -- Альбом One Love (2009)
-('When Love Takes Over', '3:11', 5),
-('Gettin Over', '3:02', 5),
-('My Feelings for You', '3:24', 5),
+('When Love Takes Over', '00:03:11', 5),
+('Gettin Over', '00:03:02', 5),
+('My Feelings for You', '00:03:24', 5),
 
 -- Альбом A Night at the Opera (1975)
-('Bohemian Rhapsody', '5:55', 6),
-('Love of My Life', '3:39', 6),
+('Bohemian Rhapsody', '00:05:55', 6),
+('Love of My Life', '00:03:39', 6),
 
 -- Альбом Future Nostalgia (2020)
-('Don''t Start Now', '3:03', 7),
-('My Future', '3:30', 7),
+('Don''t Start Now', '00:03:03', 7),
+('My Future', '00:03:30', 7),
 
 -- Альбом Chromatica (2020)
-('Rain on Me', '3:02', 8),
-('My Everything', '2:38', 8);
+('Rain on Me', '00:03:02', 8),
+('My Everything', '00:02:38', 8),
+
+-- Тестовые треки для проверки поиска по словам
+('my own', '00:03:00', 1),
+('own my', '00:03:00', 1),
+('my', '00:03:00', 1),
+('oh my god', '00:03:00', 1),
+('myself', '00:03:00', 1),
+('by myself', '00:03:00', 1),
+('bemy self', '00:03:00', 1),
+('myself by', '00:03:00', 1),
+('by myself by', '00:03:00', 1),
+('beemy', '00:03:00', 1),
+('premyne', '00:03:00', 1);
 
 -- Вставка сборников (8 сборников)
 INSERT INTO сборники (название, год_выпуска) VALUES
